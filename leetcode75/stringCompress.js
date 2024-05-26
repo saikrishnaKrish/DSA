@@ -96,3 +96,38 @@ console.log(result.length)
 
 
 https://leetcode.com/problems/string-compression/?envType=study-plan-v2&envId=leetcode-75
+
+
+
+let arr=["a","a","x","b","b","b","c","c","c","d","e","f"]
+let result=[]
+let count=1;
+let prevChar="",i=0;
+for( i=1;i<arr.length+1;i++){
+    if(arr[i]==arr[i-1]){
+        count++
+    }else{
+        if(count>1){
+            result.push(arr[i-1],count)
+        }
+        else{
+            result.push(arr[i-1])
+        }
+          count=1
+    }
+}
+
+// console.log(result,i)
+
+// let arr=[ 'a', 'b', 12 ]
+// arr=arr.join("")
+// arr=arr.split("")
+// console.log(arr)
+
+for(let i=0;i<result.length;i++){
+    arr[i]=result[i].toString()
+}
+console.log(result,arr)
+
+
+// #####################################################
